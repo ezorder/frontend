@@ -25,8 +25,13 @@ app.directive('ordersNew', function(){
     controller: 'ordersCtrl'
   }
 })
-function ordersCtrl($scope, $routeParams, $location, urlService){
+function ordersCtrl($scope, $routeParams, $location, urlService, menuService){
   var id = $routeParams.id ? $routeParams.id : null;
+  console.log('ordersCtrl');
+  menuService.getMenu().then(function(result){
+    console.log('menuService');
+    console.log(result);
+  });
   // orderService.getOrders()
   // orderService.getOrder(id)
   // orderService.createOrder()

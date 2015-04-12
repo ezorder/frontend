@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "price": "3.99",
+    "description": "3 Buttermilk pancakes topped with syrup and butter",
+    "allergens": ["wheat", "dairy"],
+    "type": ["meal", "breakfast"],
+    "image": "item_1.jpg"
+  },
+  {
+    "id": 2,
+    "price": "1.79",
+    "description": "Plain, everything, or whole grain bagel with light regular cream cheese",
+    "allergens": ["wheat", "dairy"],
+    "type": ["meal", "breakfast"],
+    "image": "item_2.jpg"
+  },
+  {
+    "id": 3,
+    "price": "3.99",
+    "description": "2 Eggs made to order with a side of bacon",
+    "allergens": ["eggs"],
+    "type": ["meal", "breakfast"],
+    "image": "item_3.jpg"
+  },
+  {
+    "id": 4,
+    "price": "4.99",
+    "description": "3 Slices of Cinnamon French Toast",
+    "allergens": ["wheat", "eggs"],
+    "type": ["meal", "breakfast"],
+    "image": "item_4.jpg"
+  }
+]
