@@ -1,7 +1,9 @@
 .partial#home-index .button-group{
-  width:90%;
+  width:100%;
   margin:99px auto 20px;
+  text-align: center;
 }
+
 .partial#home-index a{
   font-size:2em;
   padding:20px;
