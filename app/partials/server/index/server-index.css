@@ -1,0 +1,7 @@
+.partial#server-index span{
+  display:block;
+}
+.partial#server-index ul{
+  padding:20px;
+  border:1px solid #ccc;
+}
