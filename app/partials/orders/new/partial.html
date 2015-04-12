@@ -36,12 +36,18 @@
 
 <!-- Body -->
 
-<div class="container">
-	<img src ="../../../media/img/buttermilk.jpg" alt="Image of buttermilk pancakes" class= "img-responsive img-block">
-	<p>3 buttermilk pancakes topped with syrup and butter.</p>
-	<p>Price</p>
-	<!-- Box of quantity -->
-	<!-- Arrows for the item -->
+<div class="content">
+	<div class="container">
+		<div class="menu-item" ng-repeat="item in menuItems">
+
+			<img src ="./app/media/{{item.image}}" alt="Image of buttermilk pancakes" class= "img-responsive img-block">
+			<p>{{item.description}}</p>
+			<p>{{item.price}}</p>
+            <p>Allergens: {{item.allergens}}</p>
+			<!-- Box of quantity -->
+			<!-- Arrows for the item -->
+		</div>
+	</div>
 </div>
 
 <!-- Footer -->

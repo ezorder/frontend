@@ -31,6 +31,7 @@ function ordersCtrl($scope, $routeParams, $location, urlService, menuService){
   menuService.getMenu().then(function(result){
     console.log('menuService');
     console.log(result);
+    $scope.menuItems=result;
   });
   // orderService.getOrders()
   // orderService.getOrder(id)
