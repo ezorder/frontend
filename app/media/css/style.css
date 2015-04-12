@@ -1,6 +1,6 @@
 body {
-	/* Location of the image */
-	background-image: url(../img/background.jpg);
+    /* Location of the image */
+    background-image: url(../img/background.jpg);
   
     /* Background image is centered vertically and horizontally at all times */
     background-position: center center;
@@ -21,20 +21,25 @@ body {
     background-color: #464646;
 
     padding-top: 70px;
+
+    padding-bottom:70px;
 }
 
 footer {
-	background-color: #fcdd5c;
+    background-color: #fcdd5c;
 }
 
 .content {
-	text-align: center;
-	/* image align center */
+    text-align: center;
+    /* image align center */
 }
 
 .img-block {
     height:300px;
-	margin:30px 10px 30px 10px;
-  	padding:15px 15px 15px 15px;
+    margin:30px 10px 30px 10px;
+    padding:15px 15px 15px 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
