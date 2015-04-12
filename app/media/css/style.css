@@ -19,4 +19,16 @@ body {
     /* Set a background color that will be displayed
     while the background image is loading */
     background-color: #464646;
+
+    padding-top: 70px;
+}
+
+footer {
+	background-color: #fcdd5c;
+}
+
+.img-block {
+    height:300px;
+	margin:30px 10px 30px 10px;
+  	padding:15px 15px 15px 15px;
 }
