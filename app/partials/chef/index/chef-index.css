@@ -1,0 +1,7 @@
+.partial#chef-index span{
+  display:block;
+}
+.partial#chef-index ul{
+  padding:20px;
+  border:1px solid #ccc;
+}
