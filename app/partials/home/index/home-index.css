@@ -1,0 +1,10 @@
+.partial#home-index .button-group{
+  width:90%;
+  margin:99px auto 20px;
+}
+.partial#home-index a{
+  font-size:2em;
+  padding:20px;
+  margin-top:20px;
+  margin-left: 20px;
+}
