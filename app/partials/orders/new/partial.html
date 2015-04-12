@@ -9,18 +9,26 @@
 			<p>Quantity: </p>
 			<!-- Arrows for the item -->
             <!-- Large button group -->
-            <div class="btn-group">
+              <!--select ng-model="order" ng-options="[0, 1, 2, 3]"></select-->
+              <!--select ng-model="">
+                <option>0</option>
+                <option ng-click="actions.setOrderItem(item, 1)">1</option>
+                <option>2</option>
+                <option>3</option>
+              </select-->
+            <!--div class="btn-group">
              <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">0 <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">1</a></li>
-                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">2</a></li>
-                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">3</a></li>
+                   <li role="presentation"><a role="menuitem" tabindex="-1" >1</a></li>
+                   <li role="presentation"><a role="menuitem" tabindex="-1" >2</a></li>
+                   <li role="presentation"><a role="menuitem" tabindex="-1" >3</a></li>
                 </ul>
-            </div>
+            </div-->
+            <button class="btn btn-primary btn-large" ng-click="actions.setOrderItem(item, 1)">Add</button>
 		</div>
 		<div class="btn-group-lg pay-now-button" role="group">
-            	<a href="#" class="btn btn-lg btn-primary">Pay Now!</a>
+            	<a class="btn btn-lg btn-primary" ng-click="actions.placeOrder()">Place Order!</a>
             </div>
 	</div>
 </div>

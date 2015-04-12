@@ -1,6 +1,6 @@
 <div class="partial" id="chef-index">
   <link rel="stylesheet" type="text/css" href="./app/partials/chef/index/chef-index.css">
-  <h1>Chef Orders</h1>
+  <h1>{{header}} Orders</h1>
   <ul ng-repeat="order in orders" ng-show="order.order.length">
     <li ng-repeat="item in order.order">
       <span>{{item.item_name}}</span>

@@ -49,7 +49,7 @@ app.config(function($routeProvider, $locationProvider){
       templateUrl: './app/views/orders/new.html'
     })
     .when('/Server', {
-      templateUrl: './app/views/server/index.html'
+      templateUrl: './app/views/chef/index.html'
     })
     .when('/Chef', {
       templateUrl: './app/views/chef/index.html'

@@ -7,8 +7,14 @@ app.directive('chefIndex', function(){
     controller: 'chefCtrl'
   }
 });
-function chefCtrl($scope, $routeParams, $location, urlService, ordersService){
+function chefCtrl($scope, $routeParams, $location, urlService, ordersService, $interval){
   var id = $routeParams.id ? $routeParams.id : null;
+  console.log($location.path());
+  if($location.path() == '/Chef'){
+    $scope.header = "Chef"
+  } else {
+    $scope.header = "Server"
+  }
   $scope.localOrders = {};
   ordersService.getOrders().then(function(result){
     //console.log(result);
@@ -45,4 +51,17 @@ function chefCtrl($scope, $routeParams, $location, urlService, ordersService){
       //console.log($scope.localOrders[id][index]);
     }
   }
+  $interval(function(){
+    ordersService.getOrders().then(function(result){
+      //console.log(result);
+      $scope.orders = result;
+      for(i in result){
+        $scope.localOrders[result[i]._id] = [];
+        for(j in result[i].order){
+          $scope.localOrders[result[i]._id].push(result[i].order[j].status[0].status);
+        }
+        $scope.localOrders[result[i]._id]['orderDone'] = "Processing";
+      }
+    })
+  }, 1000)
 }
