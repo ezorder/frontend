@@ -40,7 +40,7 @@
 	<div class="container">
 		<div class="menu-item" ng-repeat="item in menuItems">
 
-			<img src ="./app/media/img/{{item.image}}" alt="Image of buttermilk pancakes" class= "img-responsive img-block">
+			<img ng-src ="./app/media/img/{{item.image}}" alt="Image of buttermilk pancakes" class= "img-responsive img-block">
 			<p>{{item.description}}</p>
 			<p>{{item.price}}</p>
             <p>Allergens: {{item.allergens}}</p>
