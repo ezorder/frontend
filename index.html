@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Sneaker Watcher</title>
+	<title>EZorder</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./app/media/css/style.css">
     <link rel="stylesheet" type="text/css" href="./app/media/css/layout.css">
@@ -22,15 +22,26 @@
     <script src="./app/models/menu.js"></script>
 </head>
 <body id="main">
-  <!--header>
-    <div class="container">
-      <div header-nav></div>
-    </div>
-  </header-->
+  <!-- Intro Header -->
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top text-center">
+        <div class="container">
+          <h1>EZorder</h1>
+      </div>
+    </nav>
+  </header>
   <div class="container">
     <div class="background"><h1>EZOrder</h1></div>
     <div ng-view id="view"></div>
   </div>
+  <!-- Footer -->
+    <footer>
+       <nav class="navbar navbar-default navbar-fixed-bottom text-center">
+          <div class="container">
+          <h1>Default Text</h1>
+        </div>
+    </nav>
+    </footer>
   <script type="text/javascript">
     angular.element(document).ready(function(){
       angular.bootstrap(document, ['app']);

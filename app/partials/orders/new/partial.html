@@ -1,45 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Customer, Place an order</title>
-
-    <!-- Favicons -->
-    <!-- Check out http://realfavicongenerator.net/ -->
-
-    <!-- Bootstrap - compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
-    <!-- Custom CSS for styles -->
-    <link href="./app/media/css/style.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <!-- Font awesome, googleapis -->
-</head>
-
-<body>
-
-<!-- Intro Header -->
-	<header>
-		<nav class="navbar navbar-default navbar-fixed-top text-center">
-  			<div class="container">
-    			<h1>EZorder</h1>
- 			</div>
-		</nav>
-	</header>
-
-<!-- Body -->
-
 <div class="content">
 	<div class="container">
 		<div class="menu-item" ng-repeat="item in menuItems">
-
 			<img ng-src ="./app/media/img/{{item.image}}" alt="Image of buttermilk pancakes" class= "img-responsive img-block">
 			<p>{{item.description}}</p>
 			<p>{{item.price}}</p>
@@ -49,17 +10,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- Footer -->
-    <footer>
-       <nav class="navbar navbar-default navbar-fixed-bottom text-center">
-  	   		<div class="container">
-    			<h1>Place order!</h1>
-  			</div>
-		</nav>
-    </footer>
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-</body>
