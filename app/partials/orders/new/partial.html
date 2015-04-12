@@ -3,10 +3,18 @@
 		<div class="menu-item" ng-repeat="item in menuItems">
 			<img ng-src ="./app/media/img/{{item.image}}" alt="Image of buttermilk pancakes" class= "img-responsive img-block">
 			<p>{{item.description}}</p>
-			<p>{{item.price}}</p>
+			<p>${{item.price}}</p>
             <p>Allergens: {{item.allergens}}</p>
-			<!-- Box of quantity -->
+			<p>Quantity: </p>
 			<!-- Arrows for the item -->
+            <!-- Large button group -->
+            <div class="btn-group">
+                <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">0 <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                   <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Dropdown</a></li>
+                </ul>
+            </div>
 		</div>
 	</div>
 </div>

@@ -4,6 +4,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./app/media/css/style.css">
     <link rel="stylesheet" type="text/css" href="./app/media/css/layout.css">
+    <!-- jquery -->
+    <script src="./app/media/jquery-1.11.2.min.js"></script>
+    <!-- angular -->
     <script src="./lib/angular/angular.js"></script>
     <script src="./lib/angular/angular-sanitize.min.js"></script>
     <script src="./lib/angular/angular-storage.js"></script>
@@ -25,13 +28,15 @@
   <!-- Intro Header -->
   <header>
     <nav class="navbar navbar-default navbar-fixed-top text-center">
-        <div class="container">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+           <span class="glyphicon glyphicon-home" aria-hidden="true">
+          </a>
           <h1>EZorder</h1>
       </div>
     </nav>
   </header>
   <div class="container">
-    <div class="background"><h1>EZOrder</h1></div>
     <div ng-view id="view"></div>
   </div>
   <!-- Footer -->
