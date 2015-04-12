@@ -1,7 +1,15 @@
 <div class="partial" id="chef-index">
   <link rel="stylesheet" type="text/css" href="./app/partials/chef/index/chef-index.css">
   <h1>Chef Orders</h1>
-  <ul>
+  <ul ng-repeat="order in orders" ng-show="order.order.length">
+    <li ng-repeat="item in order.order">
+      <span>{{item.item_name}}</span>
+      <button class="btn btn-danger" ng-show="localOrders[order._id][$index]=='Processing'" ng-click="actions.setOrderItemStatus(order._id, $index)">Pending</button>
+      <button class="btn btn-success" ng-show="localOrders[order._id][$index]=='Done'" ng-click="actions.unsetOrderItemStatus(order._id, $index)">Done</button>
+    </li>
+    <li>Order Status - {{localOrders[order._id]['orderDone']}}</li>
+  </ul>
+  <!--ul>
     <li>
       <span>3 Buttermilk pancakes topped with syrup and butter</span>
       <button>Pending</button>
@@ -25,5 +33,5 @@
       <span>3 Slices of Cinnamon French Toast</span>
       <button>Pending</button></li>
     <li>Order Status - Incomplete</li>
-  </ul>
+  </ul-->
 </div>
