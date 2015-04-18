@@ -31,6 +31,7 @@ function ordersCtrl($scope, $routeParams, $location, urlService, menuService, or
   $scope.order = {
     order: []
   }
+  $scope.ordered = false;
   menuService.getMenu().then(function(result){
     console.log('menuService');
     console.log(result);
@@ -58,6 +59,7 @@ function ordersCtrl($scope, $routeParams, $location, urlService, menuService, or
     placeOrder: function(){
       ordersService.createOrder($scope.order).then(function(result){
         console.log(result);
+        $scope.ordered = true;
         $scope.order = {
           order: []
         }
