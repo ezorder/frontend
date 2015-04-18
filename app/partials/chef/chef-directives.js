@@ -51,17 +51,25 @@ function chefCtrl($scope, $routeParams, $location, urlService, ordersService, $i
       //console.log($scope.localOrders[id][index]);
     }
   }
-  $interval(function(){
-    ordersService.getOrders().then(function(result){
-      //console.log(result);
-      $scope.orders = result;
-      for(i in result){
-        $scope.localOrders[result[i]._id] = [];
-        for(j in result[i].order){
-          $scope.localOrders[result[i]._id].push(result[i].order[j].status[0].status);
-        }
-        $scope.localOrders[result[i]._id]['orderDone'] = "Processing";
-      }
-    })
-  }, 1000)
+  //$interval(function(){
+  //  ordersService.getOrders().then(function(result){
+  //    //console.log(result);
+  //    $scope.orders = result;
+  //    for(i in result){
+  //      $scope.localOrders[result[i]._id] = [];
+  //      for(j in result[i].order){
+  //        $scope.localOrders[result[i]._id].push(result[i].order[j].status[0].status);
+  //      }
+  //      $scope.localOrders[result[i]._id]['orderDone'] = "Processing";
+  //    }
+  //  })
+  //}, 10000)
+  //var socket = io.connect('http://localhost:3000');
+  //socket.on('connect', function(){
+  //  console.log('Client has connected to the server');
+  //  setTimeout(function(){
+  //    socket.emit('sendMessage', {foo: 'bar'});
+  //  }, 1000);
+  //  socket.on('receivedMessage', function(message){ console.log(message) })
+  //});
 }
