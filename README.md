@@ -10,3 +10,4 @@ The order is placed and a request is sent out to both the kitchen and the chef a
 
 This application uses node.js, angular.js, bootstrap, and mongoDB for the database.
 
+Visit the Demo: https://salty-bastion-7312.herokuapp.com/#/Home
