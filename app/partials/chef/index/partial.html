@@ -9,6 +9,7 @@
     </li>
     <li>Order Status - {{localOrders[order._id]['orderDone']}}</li>
   </ul>
+  <h2 ng-show="!orders.length">There are no orders!</h2>
   <!--ul>
     <li>
       <span>3 Buttermilk pancakes topped with syrup and butter</span>
