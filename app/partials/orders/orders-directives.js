@@ -32,6 +32,18 @@ function ordersCtrl($scope, $routeParams, $location, urlService, menuService, or
     order: []
   }
   $scope.ordered = false;
+  //var socket = io.connect('http://localhost:3000');
+  //var socket = io.connect('https://sheltered-badlands-2237.herokuapp.com');
+  var socket = io.connect(EZORDERENV.socketio().client);
+  socket.on('connect', function(){
+    console.log('Table has connected to the server');
+    setTimeout(function(){
+      socket.emit('TableConnected', 'Table Connected');
+    })
+    //if($scope.ordered == true){
+    //  socket.emit('customerOrdered', 'Customer Ordered');
+    //}
+  })
   menuService.getMenu().then(function(result){
     console.log('menuService');
     console.log(result);
@@ -60,6 +72,7 @@ function ordersCtrl($scope, $routeParams, $location, urlService, menuService, or
       ordersService.createOrder($scope.order).then(function(result){
         console.log(result);
         $scope.ordered = true;
+        socket.emit('customerOrdered', 'Customer Ordered');
         $scope.order = {
           order: []
         }
