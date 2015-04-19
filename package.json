@@ -2,7 +2,7 @@
   "name": "ez-order",
   "version": "0.0.0",
   "description": "EZOrder Website",
-  "main": "index.js",
+  "main": "server.js",
   "devDependencies": {
     "karma-chrome-launcher": "~0.1.7",
     "karma-jasmine": "~0.3.3",
